@@ -1,0 +1,13 @@
+{
+    "num_epochs": 50,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+
+    "embedding_size": 300,
+    "sequence_length": 3,
+    "hidden_size": 128,
+    "gru_layers": 1,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "fine_tune_embeddings": false
+}

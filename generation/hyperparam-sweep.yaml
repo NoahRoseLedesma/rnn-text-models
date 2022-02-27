@@ -1,0 +1,31 @@
+program: src/script.py
+method: bayes
+metric:
+  name: training_loss
+  goal: minimize
+parameters:
+  num_epochs:
+    value: 50
+  batch_size:
+    value: 256
+  learning_rate:
+    min: 0.0001
+    max: 0.001
+  embedding_size:
+    value: 300
+  sequence_length:
+    value: 3
+  hidden_size:
+    value: 128
+  gru_layers:
+    min: 1
+    max: 4
+  dropout:
+    value: 0
+  bidirectional:
+    values: [True, False]
+early_terminate:
+  type: hyperband
+  s: 2
+  eta: 3
+  max_iter: 50
